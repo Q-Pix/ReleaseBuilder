@@ -1,5 +1,5 @@
 # ReleaseBuilder
-One stop shop for Marley, Q_PIX_GEANT4, Q_PIX_RTD, and qpixar
+One stop shop for Marley, qpixg4, qpixrtd, and qpixar
 
 
 
