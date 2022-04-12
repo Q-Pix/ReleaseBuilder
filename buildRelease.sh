@@ -91,3 +91,15 @@ while read -r line; do
 
 
 done < "$input"
+
+clear -x
+cd $initdir/..
+input="./ReleaseBuilder/packages.txt"
+echo The QPix Release is now set up with the following packages:
+while read -r line; do
+	IFS=' ' read -r -a stringarray <<<  "$line";
+    PACKAGE=${stringarray[0]};
+    TAG=${stringarray[1]};
+	echo "$PACKAGE    $TAG"
+done < "$input"
+echo "(output saved in scrollback)" 
