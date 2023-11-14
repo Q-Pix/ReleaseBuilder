@@ -6,7 +6,7 @@ One stop shop for Marley, qpixg4, qpixrtd, and qpixar
 ## Dependencies
 The 4 packages that will be built by ReleaseBuilder will require the following dependencies
 * ROOT 6.18/04+
-* Geant4 11.0+
+* Geant4 10.7+ (not v11)
 
 * cmake 3.15.5+
 * make 3.81+
