@@ -10,7 +10,7 @@
 # 
 # ./buildRelease <Release Number>
 #
-# Should clone Q_PIX_GEANT4, Q_PIX_RTD, and qpixar into parallel directories, and run any initial
+# Should clone qpixg4, qpixrtd, qpixar, and qpixrec into parallel directories, and run any initial
 # build or setup scripts. For future uses, you should only have to run setup scripts.
 
 initdir=$(pwd)
@@ -64,13 +64,14 @@ while read -r line; do
 		
 				qpixg4)
 					echo Performing any G4 specific tasks...
-					echo $(pwd -P)
-					source $G4INSTALL/bin/geant4.sh
-					source $ROOTSYS/bin/thisroot.sh
-					source ./setup/setup_marley.sh;
+					echo $(pwd -P);
+					source $G4INSTALL/bin/geant4.sh;
+					source $ROOTSYS/bin/thisroot.sh;
+					source ./setup/setup_marley.sh $initdir/../marley;
+                    [ -d "Build" ] || mkdir Build;
 					cd Build;
 					cmake ../;
-					make
+					make;
 					;;
 
 				qpixrtd)
@@ -78,12 +79,21 @@ while read -r line; do
 					source ./build.sh;
 					echo Building the EXAMPLE...;
 					echo $(pwd -P)
-					cd $initdir/../qpixrtd/EXAMPLE/build; cmake ..; make; cd ..; 
+					cd $initdir/../qpixrtd/EXAMPLE/build; cmake ..; make; cd ..;
+                    cd $initdir/../qpixrtd/RTD;
+                    [ -d "build" ] || mkdir build;
+                    cd build;
+                    cmake ../;
+                    make;
 					;;
 
 				qpixar)
 					echo Performing any AR specific tasks...
 					;;
+
+                qpixrec)
+                    echo Performing any REC specific tasks...
+                    ;;
 
 			esac
 		;;
