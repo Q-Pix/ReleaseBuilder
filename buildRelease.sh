@@ -77,14 +77,6 @@ while read -r line; do
 				qpixrtd)
 					echo Performing any RTD specific tasks...;
 					source ./build.sh;
-					echo Building the EXAMPLE...;
-					echo $(pwd -P)
-					cd $initdir/../qpixrtd/EXAMPLE/build; cmake ..; make; cd ..;
-                    cd $initdir/../qpixrtd/RTD;
-                    [ -d "build" ] || mkdir build;
-                    cd build;
-                    cmake ../;
-                    make;
 					;;
 
 				qpixar)
