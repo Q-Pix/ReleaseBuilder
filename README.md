@@ -17,9 +17,10 @@ The 4 packages that will be built by ReleaseBuilder will require the following d
 * uproot 3.11.3+
 
 In addition, you will need to define ROOT and G4INSTALL variables with the following
+```
 source $ROOTSYS/bin/thisroot.sh
 source path/to/GEANT4/bin/geant4.sh
-
+```
 ReleaseBuilder will check that the versions of ROOT and Geant4 are compatible, however, it will not check the others. It is your responsibility to set up the environment before using ReleaseBuilder. 
 
 ## How to use
