@@ -1,5 +1,5 @@
 marley v1.2.1 git@github.com:MARLEY-MC/marley.git
-qpixg4 v3.0.0 git@github.com:Q-Pix/qpixg4.git
+qpixg4 v3.0.1 git@github.com:Q-Pix/qpixg4.git
 qpixrtd v2.0.1 git@github.com:Q-Pix/qpixrtd.git
 qpixrec v2.0.0 git@github.com:Q-Pix/qpixrec.git
 
